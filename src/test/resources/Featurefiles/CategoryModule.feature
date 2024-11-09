@@ -12,5 +12,6 @@ Feature: Category Module
     And logout of skillrary
 
     Examples: 
+      | category   |
       | RPA        |
       | Automation |

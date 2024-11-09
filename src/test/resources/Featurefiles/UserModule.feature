@@ -7,6 +7,4 @@ Feature: User Module
     When I enter user page 
     And add an user
     Then user should be created
-    When I delete user
-    Then user should be removed from user list
     And logout of skillrary

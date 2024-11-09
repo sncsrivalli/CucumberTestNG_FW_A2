@@ -13,6 +13,9 @@ public class UsersPage {
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newBTN;
 	
+	@FindBy(className = "alert-success")
+	private WebElement successAlert;
+	
 	public UsersPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -23,5 +26,9 @@ public class UsersPage {
 	
 	public void clickNew() {
 		newBTN.click();
+	}
+	
+	public String getSuccessAlertMessage() {
+		return successAlert.getText();
 	}
 }
