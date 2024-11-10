@@ -56,7 +56,7 @@ public class DriverUtility {
 		driver.switchTo().defaultContent();
 	}
 	
-	public String getScreenshot(String testname) {
+	public File getScreenshot(String testname) {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File dest =  new File("./screenshots/"+testname+".png");
 		try {
@@ -64,7 +64,7 @@ public class DriverUtility {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return dest.getAbsolutePath();
+		return dest;
 	}
 	
 	public WebElement convertDynamicPathToWebElement(String dynamicPath, String replaceData) {
